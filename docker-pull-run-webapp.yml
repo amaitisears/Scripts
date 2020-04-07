@@ -11,16 +11,16 @@
     ignore_errors: yes
 
   - name: remove docker image
-    command: docker rmi deraviyam/docker-webapp-image:latest
+    command: docker rmi amaiti/canada-docker-webapp:latest
     ignore_errors: yes
 
 #  - name: building docker image
-#    command: docker build -t docker-webapp-image .
+#    command: docker build -t canada-docker-webapp .
 #    args:
 #      chdir: /opt/docker
 
   - name: Pull docker image from dockerhub
-    command: docker pull deraviyam/docker-webapp-image:latest
+    command: docker pull amaiti/canada-docker-webapp:latest
 
-  - name: create container using deraviyam/docker-webapp-image
-    command: docker run -d --name docker-webapp-container -p 4000:8080 deraviyam/docker-webapp-image:latest
+  - name: create container using amaiti/canada-docker-webapp
+    command: docker run -d --name docker-webapp-container -p 4000:8080 amaiti/canada-docker-webapp:latest
